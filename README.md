@@ -1,11 +1,10 @@
-# CB Messaging Blueprint 
+# CB Maps Blueprint
 
 This is a Maps Blueprint.
 
 Screens:
+
 - Map Show
 - Navigation
 
 Screenshots is included for reference
-
-
