@@ -16,7 +16,7 @@ source blueprint-lib/init.sh
 # APP_NAME is the name of the Django app that will be modified
 ##
 
-BLUEPRINT="MapsBlueprint"
+BLUEPRINT="Maps"
 NAME="Maps"
 
 DATA_1="{ name: '${BLUEPRINT}', human_name: '${NAME}', access_route: '${BLUEPRINT}'},"
