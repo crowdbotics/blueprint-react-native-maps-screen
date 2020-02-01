@@ -4,7 +4,7 @@ import MapsHome from "./screens/MapsHome";
 import Home from "./screens/";
 
 
-export const GoogleMapsNavigator = createStackNavigator(
+export const MapsNavigator = createStackNavigator(
   {
     Maps: { screen: MapsHome },
     Home: { screen: Home },
