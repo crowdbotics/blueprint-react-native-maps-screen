@@ -16,7 +16,18 @@ source blueprint-lib/init.sh
 # APP_NAME is the name of the Django app that will be modified
 ##
 
-NAME="Maps"
+BLUEPRINT="$3"
+NAME="$4"
+
+if [ -z "$BLUEPRINT" ]
+then
+    BLUEPRINT="Maps"
+fi
+
+if [ -z "$NAME" ] 
+then
+    NAME="Maps"
+fi
 
 EXT_POINT_1="@BlueprintInsertion"
 EXT_POINT_2="@BlueprintImportInsertion"
