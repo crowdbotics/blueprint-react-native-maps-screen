@@ -32,15 +32,15 @@ fi
 EXT_POINT_1="@BlueprintInsertion"
 EXT_POINT_2="@BlueprintImportInsertion"
 EXT_POINT_3="@BlueprintNavigationInsertion"
-DATA_1="{ name: '${NAME}', human_name: '${NAME}', access_route: '${NAME}', icon: 'map'},"
-DATA_2="import ${NAME}Navigator from '..\/features\/${NAME}\/navigator';"
-DATA_3="${NAME}: { screen: ${NAME}Navigator },"
+DATA_1="{ name: '${BLUEPRINT}', human_name: '${NAME}', access_route: '${BLUEPRINT}', icon: 'map'},"
+DATA_2="import ${BLUEPRINT}Navigator from '..\/features\/${BLUEPRINT}\/navigator';"
+DATA_3="${BLUEPRINT}: { screen: ${BLUEPRINT}Navigator },"
 
 echo "create blueprint folder"
-mkdir -p $BASE_PATH/src/features/$NAME
+mkdir -p $BASE_PATH/src/features/$BLUEPRINT
 
 echo "copy"
-cp -r ./$NAME/. $BASE_PATH/src/features/$NAME
+cp -r ./Maps/. $BASE_PATH/src/features/$BLUEPRINT
 
 echo ">> insert 1" 
 sed -i "s/${EXT_POINT_1}/&\n${DATA_1}/g" $BASE_PATH/src/config/installed_blueprints.js
