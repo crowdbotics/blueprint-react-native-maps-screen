@@ -10,7 +10,7 @@ export default class MapsScreen extends Component {
     super(props);
   }
 
-  region: {
+  region = {
     //customize where you want the maps to start
     latitude: 37.78825,
     longitude: -122.4324,
