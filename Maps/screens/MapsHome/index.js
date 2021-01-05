@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import { Input } from "react-native-ui-kitten";
-
-import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
-
+import { TextInput } from "react-native";
 import { styles } from './styles'
+import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
 
 export default class MapsScreen extends Component {
   constructor(props) {
@@ -19,15 +17,16 @@ export default class MapsScreen extends Component {
   };
 
   render() {
-    return [
-      <MapView
-        provider={PROVIDER_GOOGLE}
-        style={styles.map}
-        initialRegion={this.region}
-      />,
-
-      <Input style={styles.searchbar} placeholder="Search..." />
-    ];
+    return (
+      <View style={styles.view}>
+        <MapView
+          provider={PROVIDER_GOOGLE}
+          style={styles.map}
+          initialRegion={this.region}
+        />
+        <TextInput style={styles.searchbar} value="Search..." />
+      </View>
+    );
   }
 }
 
