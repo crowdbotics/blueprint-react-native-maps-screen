@@ -1,6 +1,5 @@
-import React, {PureComponent} from 'react';
-import {View, Platform, StyleSheet} from 'react-native';
-import {Text, Button} from 'react-native-ui-kitten';
+import React, { PureComponent } from 'react';
+import { Button, View, Platform, StyleSheet } from 'react-native';
 
 export default class Root extends PureComponent {
   static navigationOptions = {
@@ -13,15 +12,13 @@ export default class Root extends PureComponent {
       <View style={styles.container}>
         <Button
           onPress={() => this.props.navigation.navigate('Maps')}
-          style={styles.item}>
-          Maps
-        </Button>
+          style={styles.item}
+          title="Maps" />
 
         <Button
           onPress={() => this.props.navigation.navigate('SplashScreen')}
-          style={styles.item}>
-          Main Menu
-        </Button>
+          style={styles.item}
+          title="Main Menu" />
       </View>
     );
   }
@@ -34,7 +31,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   statusbar: {
-    height: Platform.select({ios: 20, android: 0}),
+    height: Platform.select({ ios: 20, android: 0 }),
   },
   item: {
     borderBottomWidth: 1,
